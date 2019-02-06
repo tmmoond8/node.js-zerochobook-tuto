@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => (
       unique: true,
     },
     nick: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(30),
       allowNull: false,
     },
     password: {
@@ -25,5 +25,7 @@ module.exports = (sequelize, DataTypes) => (
   }, {
     timestamps: true,
     paranoid: true,
+    charset:'utf8',
+    collate:'utf8_general_ci',
   })
 );
